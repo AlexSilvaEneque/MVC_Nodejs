@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+</head>
+<body>
+    <a href="/create">New</a>
+    {{#each users}}
+        <p>{{this.name}}</p>
+        <a href="/edit/{{this.id}}">Edit</a>
+        <button onclick="eliminar({{this.id}})">Eliminar</button>
+    {{/each}}
+
+    <script src="/js/delete.js"></script>
+</body>
+</html>
